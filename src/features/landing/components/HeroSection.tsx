@@ -1,6 +1,6 @@
-import prumoIcon from '../../../assets/prumoIcon.png'
-import { Link } from 'react-router-dom'
-import { motion, easeOut } from 'framer-motion'
+import prumoIcon from "../../../assets/prumoIcon.png";
+import { Link } from "react-router-dom";
+import { motion, easeOut } from "framer-motion";
 
 const containerVariants = {
   hidden: {},
@@ -9,7 +9,7 @@ const containerVariants = {
       staggerChildren: 0.15,
     },
   },
-}
+};
 
 const itemVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -18,7 +18,7 @@ const itemVariants = {
     y: 0,
     transition: { duration: 0.6, ease: easeOut },
   },
-}
+};
 
 function HeroSection() {
   return (
@@ -62,10 +62,7 @@ function HeroSection() {
           barbershop runs smoothly every single day.
         </motion.p>
 
-        <motion.div
-          className="mt-10 flex gap-4"
-          variants={itemVariants}
-        >
+        <motion.div className="mt-10 flex gap-4" variants={itemVariants}>
           <Link
             to="/register"
             className="
@@ -95,7 +92,7 @@ function HeroSection() {
         </motion.div>
       </motion.div>
     </section>
-  )
+  );
 }
 
-export default HeroSection
+export default HeroSection;

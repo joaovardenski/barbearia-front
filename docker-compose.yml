@@ -1,0 +1,13 @@
+services:
+  web:
+    build: .
+    container_name: prumo_web
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    stdin_open: true
+    tty: true
